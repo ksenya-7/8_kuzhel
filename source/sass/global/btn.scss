@@ -1,0 +1,30 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 288px;
+  min-height: 51px;
+
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 21px;
+  text-align: center;
+
+  background-color: $color-button;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: lighten($color-button, 6.25%);
+    transition: $transition-time;
+    outline: none;
+  }
+
+  &:active {
+    background-color: darken($color-button, 6.25%);
+    transition: $transition-time;
+    outline: none;
+  }
+}
