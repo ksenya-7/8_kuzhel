@@ -2,6 +2,9 @@
 var nav = document.querySelector('.site-navigation');
 var navToggle = document.querySelector('.main-header__toggle');
 
+if (navToggle) {
+  navToggle.classList.remove('main-header__toggle--nojs');
+}
 
 if (nav) {
   nav.classList.remove('site-navigation--nojs');

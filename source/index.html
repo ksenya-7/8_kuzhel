@@ -41,8 +41,9 @@
         <include src="build/img/sprite_auto.svg"></include>
       </div>
       <header class="main-header">
+        <!-- класс main-header__toggle--active переключает состояние кнопки -->
         <button
-          class="main-header__toggle"
+          class="main-header__toggle main-header__toggle--nojs"
           type="button"
           aria-label="навигация для открытия выпадающего меню"
         >
@@ -345,7 +346,7 @@
                 <use xlink:href="#icon_mail"></use>
               </svg>
 
-              <span class="contacts__email"> puteshestviemechta@gmail.ru </span>
+              <span> puteshestviemechta@gmail.ru </span>
             </a>
           </li>
           <li>
