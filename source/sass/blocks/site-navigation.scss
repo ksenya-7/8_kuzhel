@@ -35,15 +35,28 @@
   }
 
   @include viewport--lg {
+    display: none;
+
     width: 100%;
 
     font-weight: 400;
     font-size: 20px;
     line-height: 28px;
-  }
 
-  // @include viewport--md {
-  // }
+    &--nojs {
+      display: flex;
+      position: static;
+    }
+
+    &--open {
+      display: flex;
+      position: absolute;
+      z-index: 1;
+      // overflow: hidden;
+      // height: 100vh;
+      // position: fixed;
+    }
+  }
 }
 
 .site-navigation__list {
@@ -69,7 +82,7 @@
     min-width: 320px;
     min-height: 568px;
     padding: 100px 0 0 0;
-    background-color: $color-fonbasic;
+
     color: $color-menutext;
   }
 

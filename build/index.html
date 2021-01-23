@@ -22,14 +22,13 @@
             <use xlink:href="#icon_close"></use>
           </svg>
         </span>
-        <span class="main-header__btn-open main-header__btn-open--nojs">
+        <span class="main-header__btn-open">
           <svg width="24" height="14" viewBox="0 0 24 14">
             <use xlink:href="#icon_open"></use>
           </svg>
         </span>
       </button>
-
-      <nav class="main-header__nav site-navigation main-header__nav--nojs">
+      <nav class="main-header__nav site-navigation site-navigation--nojs">
         <ul class="site-navigation__list">
           <li class="site-navigation__item">
             <a href="#about" class="site-navigation__link" aria-label="переход к разделу 'О нас'">
@@ -73,12 +72,9 @@
           </li>
         </ul>
       </nav>
-    </header>
-    <main>
-      <h1 class="visually-hidden">Сайт продажи велосипедов Moon</h1>
 
-      <section class="intro">
-        <div class="intro__promo">
+      <div class="main-header__intro">
+        <div class="main-header__promo">
           <a>
             <svg width="68" height="21" viewBox="0 0 68 21">
               <use xlink:href="#logo_moon"></use>
@@ -89,27 +85,30 @@
         </div>
 
         <form action="https://echo.htmlacademy.ru" method="get">
-          <div class="intro__form">
+          <div class="main-header__form">
             <p>Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
 
-            <ul class="intro__list">
-              <li class="intro__item">
+            <ul class="main-header__list">
+              <li class="main-header__item">
                 <label>
-                  <input id="intro-username" type="text" name="username" placeholder="Введите Ваше Имя" required="">
+                  <input id="user-name" type="text" name="user-name" placeholder="Введите Ваше Имя" required="">
                 </label>
               </li>
-              <li class="intro__item">
+              <li class="main-header__item">
                 <label>
-                  <input id="intro-usertel" type="tel" name="usertel" placeholder="Введите Ваш номер телефона" required="">
+                  <input id="user-tel" type="tel" name="user-tel" placeholder="Введите Ваш номер телефона" required="">
                 </label>
               </li>
             </ul>
-            <button class="btn intro__button" type="submit" aria-label="отправить контактные данные">
+            <button class="btn main-header__button" type="submit" aria-label="отправить контактные данные">
               Подобрать велосипед мечты
             </button>
           </div>
         </form>
-      </section>
+      </div>
+    </header>
+    <main>
+      <h1 class="visually-hidden">Сайт продажи велосипедов Moon</h1>
 
       <section id="about" class="about">
         <h2>Несколько фактов о нас</h2>
@@ -240,7 +239,7 @@
       </ul>
     </footer>
 
-    <!-- <script src="js/script.js"></script> -->
+    <script src="js/script.js"></script>
   </body>
 </html>
 

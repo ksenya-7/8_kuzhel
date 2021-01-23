@@ -21,6 +21,7 @@ $transition-time: 0.5s;
 //colors
 //-----------
 $color-fonbasic:rgb(255, 255, 255);
+$color-fonbasictint8:rgba(255, 255, 255, 0.8);
 $color-fonbasictint7:rgba(255, 255, 255, 0.7);
 $color-fonbasictint2:rgba(255, 255, 255, 0.2);
 $color-text: rgb(0, 0, 0);
@@ -31,7 +32,7 @@ $color-texttint5: rgba(0, 0, 0, 0.5);
 $color-button:rgb(10, 217, 198);
 $color-title: rgb(31, 31, 31);
 
-$color-input: rgb(28, 28, 28);
+$color-input: rgba(28, 28, 28, 0.5);
 $color-inputborder: rgb(201, 204, 212);
 
 $color-introback: rgb(13, 13, 13);

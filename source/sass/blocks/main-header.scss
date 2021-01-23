@@ -1,31 +1,47 @@
 .main-header {
+  // box-shadow: 0 0 0 3px rgb(33, 51, 216);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  // position: absolute;
   z-index: 1;
+  position: relative;
 
   margin: 0 auto;
   padding: 0;
   width: 100%;
+  min-height: 825px;
+  background-color: $color-introback;
+  background-image: url("../img/jpg/bike_intro_desktop_1x.jpg");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/jpg/bike_intro_desktop_2x.jpg");
+  }
+
+  @include viewport--lg {
+    position: relative;
+    min-height: 683px;
+    background-color: $color-fonbasic;
+    background-image: none;
+  }
+}
+
+.main-header__nav {
+  display: none;
+
+  &--nojs {
+    display: flex;
+  }
 
   @include viewport--lg {
     // display: none;
     flex-direction: column;
-    position: static;
-
-    &--nojs {
-      display: flex;
-    }
+    // position: static;
+    background-color: $color-fonbasic;
   }
-
-  // @include viewport--md {
-  // }
 }
-
-// .main-header__nav {
-
-// }
 
 .main-header__toggle {
   display: none;
@@ -35,9 +51,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
+
+    padding: 0;
 
     background-color: transparent;
     border: none;
+
+    &--active {
+      span:nth-child(1) {
+        display: flex;
+      }
+
+      span:nth-child(2) {
+        display: none;
+      }
+    }
   }
 
   &:hover,
@@ -61,8 +93,181 @@
 
   width: 50px;
   height: 50px;
+  background-color: $color-button;
+}
 
-  &--nojs {
-    display: none;
+.main-header__intro {
+  // box-shadow: 0 0 0 3px rgb(33, 216, 88);
+  display: flex;
+  justify-content: space-between;
+  width: 880px;
+  margin-top: 256px;
+
+  @include viewport--lg {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    width: 100%;
+    min-height: 683px;
+    margin-top: 0;
   }
+}
+
+.main-header__promo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 393px;
+  min-height: 267px;
+
+  @include viewport--lg {
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+    min-height: 340px;
+    // height: 340px;
+    padding: 25px 21px;
+
+    background-color: $color-introback;
+    background-image: url("../img/jpg/bike_intro_tablet_1x.jpg");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/jpg/bike_intro_tablet_2x.jpg");
+    }
+  }
+
+  @include viewport--md {
+    min-height: 390px;
+    padding: 25px 16px;
+
+    background-image: url("../img/jpg/bike_intro_mobile_1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/jpg/bike_intro_mobile_2x.jpg");
+    }
+  }
+}
+
+.main-header__promo h2 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 64px;
+  letter-spacing: -0.005em;
+  text-align: start;
+  color: $color-fonbasic;
+
+  @include viewport--lg {
+    align-self: center;
+    width: 525px;
+    margin-top: 88px;
+
+    font-size: 30px;
+    line-height: 42px;
+    text-align: center;
+  }
+
+  @include viewport--md {
+    width: 288px;
+    margin-top: 75px;
+  }
+}
+
+.main-header__promo p {
+  margin: 0;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: -0.005em;
+  text-align: start;
+  color: $color-fonbasictint8;
+
+  @include viewport--lg {
+    align-self: center;
+    width: 435px;
+    margin-top: 20px;
+
+    font-size: 18px;
+    text-align: center;
+  }
+
+  @include viewport--md {
+    width: 288px;
+  }
+}
+
+.main-header__form {
+  // box-shadow: 0 0 0 3px rgb(216, 167, 33);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 326px;
+  min-height: 263px;
+
+  @include viewport--lg {
+    width: 321px;
+    margin-top: 70px;
+  }
+
+  @include viewport--md {
+    width: 288px;
+  }
+}
+
+.main-header__form p {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: -0.005em;
+  color: $color-fonbasic;
+
+  @include viewport--lg {
+    font-size: 18px;
+    color: $color-text;
+  }
+}
+
+.main-header__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-header__item {
+  width: 100%;
+}
+
+// .main-header__item label {
+//   width: 100%;
+//   margin: 0;
+//   padding: 14px auto 10px 29px;
+
+//   font-weight: normal;
+//   font-size: 15px;
+//   line-height: 24px;
+//   color: $color-input;
+// }
+
+.main-header__item input {
+  width: 100%;
+  min-height: 48px;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  padding-top: 5px;
+  padding-left: 29px;
+  border: 1px solid $color-inputborder;
+  border-radius: 4px;
+
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 24px;
+  color: $color-input;
 }
