@@ -26,6 +26,10 @@
     background-color: $color-fonbasic;
     background-image: none;
   }
+
+  @include viewport--md{
+    min-height: 747px;
+  }
 }
 
 .main-header__nav {
@@ -225,6 +229,7 @@
 }
 
 .main-header__form p {
+  margin: 0;
   font-weight: 600;
   font-size: 17px;
   line-height: 28px;
@@ -240,24 +245,18 @@
 
 .main-header__list {
   margin: 0;
+  margin-top: 30px;
   padding: 0;
   list-style: none;
+
+  @include viewport--lg {
+    margin-top: 20px;
+  }
 }
 
 .main-header__item {
   width: 100%;
 }
-
-// .main-header__item label {
-//   width: 100%;
-//   margin: 0;
-//   padding: 14px auto 10px 29px;
-
-//   font-weight: normal;
-//   font-size: 15px;
-//   line-height: 24px;
-//   color: $color-input;
-// }
 
 .main-header__item input {
   width: 100%;
@@ -274,4 +273,12 @@
   font-size: 15px;
   line-height: 24px;
   color: $color-input;
+
+  @include viewport--lg {
+    padding-left: 21px;
+  }
+
+  @include viewport--md {
+    padding-left: 26px;
+  }
 }
