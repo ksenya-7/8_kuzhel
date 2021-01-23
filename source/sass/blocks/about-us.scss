@@ -3,17 +3,24 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   width: 1166px;
   min-height: 233px;
   margin: 0 auto;
+  margin-top: 131px;
 
   @include viewport--xl {
     width: 90.23%;
+  }
+
+  @include viewport--lg {
+    margin-top: 70px;
   }
 }
 
 .about-us h2 {
   font-weight: 600;
+  margin: 0;
   margin-top: 150px;
   font-size: 30px;
   line-height: 30px;

@@ -15,5 +15,3 @@ if (nav) {
     navToggle.classList.toggle('main-header__toggle--active');
   });
 }
-
-// document.querySelector('body').classList.add('site-navigation--open');
