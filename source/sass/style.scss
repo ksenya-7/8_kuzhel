@@ -7,8 +7,9 @@
 
 //global
 //--------------
-@import "global/fonts.scss";
 @import "global/btn.scss";
+@import "global/container.scss";
+@import "global/fonts.scss";
 @import "global/reboot.scss";
 @import "global/typography.scss";
 @import "global/utils.scss";
@@ -17,4 +18,5 @@
 //--------------
 @import "blocks/main-header.scss";
 @import "blocks/site-navigation.scss";
-// @import "blocks/intro.scss";
+@import "blocks/contacts.scss";
+// @import "blocks/contacts.scss";

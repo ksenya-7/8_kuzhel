@@ -36,331 +36,334 @@
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
-    <div style="display: none">
-      <include src="build/img/sprite_auto.svg"></include>
-    </div>
-    <header class="main-header">
-      <button
-        class="main-header__toggle"
-        type="button"
-        aria-label="навигация для открытия выпадающего меню"
-      >
-        <span class="main-header__btn-close">
-          <svg width="24" height="25" viewBox="0 0 24 25">
-            <use xlink:href="#icon_close"></use>
-          </svg>
-        </span>
-        <span class="main-header__btn-open">
-          <svg width="24" height="14" viewBox="0 0 24 14">
-            <use xlink:href="#icon_open"></use>
-          </svg>
-        </span>
-      </button>
-      <nav class="main-header__nav site-navigation site-navigation--nojs">
-        <ul class="site-navigation__list">
-          <li class="site-navigation__item">
-            <a
-              href="#about"
-              class="site-navigation__link"
-              aria-label="переход к разделу 'О нас'"
-            >
-              О нас
-              <span class="site-navigation__icon">
-                <svg width="8" height="12" viewBox="0 0 8 12">
-                  <use xlink:href="#icon_arrow"></use>
-                </svg>
-              </span>
-            </a>
-          </li>
-          <li class="site-navigation__item">
-            <a
-              href="#types"
-              class="site-navigation__link"
-              aria-label="переход к разделу 'Виды велосипедов'"
-            >
-              Виды велосипедов
-              <span class="site-navigation__icon">
-                <svg width="8" height="12" viewBox="0 0 8 12">
-                  <use xlink:href="#icon_arrow"></use>
-                </svg>
-              </span>
-            </a>
-          </li>
-          <li class="site-navigation__item">
-            <a
-              href="#video"
-              class="site-navigation__link"
-              aria-label="переход к разделу 'Видео про велосипеды'"
-            >
-              Видео про велосипеды
-              <span class="site-navigation__icon">
-                <svg width="8" height="12" viewBox="0 0 8 12">
-                  <use xlink:href="#icon_arrow"></use>
-                </svg>
-              </span>
-            </a>
-          </li>
-          <li class="site-navigation__item">
-            <a
-              href="#contacts"
-              class="site-navigation__link"
-              aria-label="переход к разделу 'Контакты'"
-            >
-              Контакты
-              <span class="site-navigation__icon">
-                <svg width="8" height="12" viewBox="0 0 8 12">
-                  <use xlink:href="#icon_arrow"></use>
-                </svg>
-              </span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-
-      <div class="main-header__intro">
-        <div class="main-header__promo">
-          <a>
-            <svg width="68" height="21" viewBox="0 0 68 21">
-              <use xlink:href="#logo_moon"></use>
+    <div class="container">
+      <div style="display: none">
+        <include src="build/img/sprite_auto.svg"></include>
+      </div>
+      <header class="main-header">
+        <button
+          class="main-header__toggle"
+          type="button"
+          aria-label="навигация для открытия выпадающего меню"
+        >
+          <span class="main-header__btn-close">
+            <svg width="24" height="25" viewBox="0 0 24 25">
+              <use xlink:href="#icon_close"></use>
             </svg>
-          </a>
-          <h2>Мы продаем велосипеды</h2>
-          <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+          </span>
+          <span class="main-header__btn-open">
+            <svg width="24" height="14" viewBox="0 0 24 14">
+              <use xlink:href="#icon_open"></use>
+            </svg>
+          </span>
+        </button>
+        <nav class="main-header__nav site-navigation site-navigation--nojs">
+          <ul class="site-navigation__list">
+            <li class="site-navigation__item">
+              <a
+                href="#about"
+                class="site-navigation__link"
+                aria-label="переход к разделу 'О нас'"
+              >
+                О нас
+                <span class="site-navigation__icon">
+                  <svg width="8" height="12" viewBox="0 0 8 12">
+                    <use xlink:href="#icon_arrow"></use>
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li class="site-navigation__item">
+              <a
+                href="#types"
+                class="site-navigation__link"
+                aria-label="переход к разделу 'Виды велосипедов'"
+              >
+                Виды велосипедов
+                <span class="site-navigation__icon">
+                  <svg width="8" height="12" viewBox="0 0 8 12">
+                    <use xlink:href="#icon_arrow"></use>
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li class="site-navigation__item">
+              <a
+                href="#video"
+                class="site-navigation__link"
+                aria-label="переход к разделу 'Видео про велосипеды'"
+              >
+                Видео про велосипеды
+                <span class="site-navigation__icon">
+                  <svg width="8" height="12" viewBox="0 0 8 12">
+                    <use xlink:href="#icon_arrow"></use>
+                  </svg>
+                </span>
+              </a>
+            </li>
+            <li class="site-navigation__item">
+              <a
+                href="#contacts"
+                class="site-navigation__link"
+                aria-label="переход к разделу 'Контакты'"
+              >
+                Контакты
+                <span class="site-navigation__icon">
+                  <svg width="8" height="12" viewBox="0 0 8 12">
+                    <use xlink:href="#icon_arrow"></use>
+                  </svg>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="main-header__intro">
+          <div class="main-header__promo">
+            <a>
+              <svg width="68" height="21" viewBox="0 0 68 21">
+                <use xlink:href="#logo_moon"></use>
+              </svg>
+            </a>
+            <h2>Мы продаем велосипеды</h2>
+            <p>
+              Наш магазин отбирает только самые лучшие велосипеды для продажи
+            </p>
+          </div>
+
+          <form action="https://echo.htmlacademy.ru" method="get">
+            <div class="main-header__form">
+              <p>Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
+
+              <ul class="main-header__list">
+                <li class="main-header__item">
+                  <label>
+                    <input
+                      id="user-name"
+                      type="text"
+                      name="user-name"
+                      placeholder="Введите Ваше Имя"
+                      required
+                    />
+                  </label>
+                </li>
+                <li class="main-header__item">
+                  <label>
+                    <input
+                      id="user-tel"
+                      type="tel"
+                      name="user-tel"
+                      placeholder="Введите Ваш номер телефона"
+                      required
+                    />
+                  </label>
+                </li>
+              </ul>
+              <button
+                class="btn main-header__button"
+                type="submit"
+                aria-label="отправить контактные данные"
+              >
+                Подобрать велосипед мечты
+              </button>
+            </div>
+          </form>
         </div>
+      </header>
+      <main>
+        <h1 class="visually-hidden">Сайт продажи велосипедов Moon</h1>
 
-        <form action="https://echo.htmlacademy.ru" method="get">
-          <div class="main-header__form">
-            <p>Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
+        <section id="about" class="about">
+          <h2>Несколько фактов о нас</h2>
+          <ul class="about__list">
+            <li class="about__item">
+              <h3>01</h3>
+              <p>Самый широкий выбор велосипедов!</p>
+            </li>
+            <li class="about__item">
+              <h3>02</h3>
+              <p>Доставка велосипедов по всей России!</p>
+            </li>
+            <li class="about__item">
+              <h3>03</h3>
+              <p>Большой выбор крутых аксессуаров!</p>
+            </li>
+            <li class="about__item">
+              <h3>04</h3>
+              <p>Профессиональные консультации!</p>
+            </li>
+          </ul>
+        </section>
 
-            <ul class="main-header__list">
-              <li class="main-header__item">
-                <label>
-                  <input
-                    id="user-name"
-                    type="text"
-                    name="user-name"
-                    placeholder="Введите Ваше Имя"
-                    required
-                  />
-                </label>
-              </li>
-              <li class="main-header__item">
-                <label>
-                  <input
-                    id="user-tel"
-                    type="tel"
-                    name="user-tel"
-                    placeholder="Введите Ваш номер телефона"
-                    required
-                  />
-                </label>
-              </li>
-            </ul>
-            <button
-              class="btn main-header__button"
-              type="submit"
-              aria-label="отправить контактные данные"
-            >
-              Подобрать велосипед мечты
+        <section id="types" class="types">
+          <h2>Виды велосипедов</h2>
+          <ul class="types__list">
+            <li class="types__item">
+              <picture>
+                <source
+                  type="image/webp"
+                  media="(max-width: 768px)"
+                  srcset="
+                    img/webp/bike_type1_tablet_1x.webp 1x,
+                    img/webp/bike_type1_tablet_1x.webp 2x
+                  "
+                />
+                <source
+                  media="(max-width: 768px)"
+                  srcset="
+                    img/jpg/bike_type1_tablet_1x.jpg 1x,
+                    img/jpg/bike_type1_tablet_2x.jpg 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  media="(max-width: 1024px)"
+                  srcset="
+                    img/webp/bike_type1_desktop_1x.webp 1x,
+                    img/webp/bike_type1_desktop_2x.webp 2x
+                  "
+                />
+                <!-- 1х: 342px; 2x: 684px -->
+                <img
+                  width="342"
+                  height="503"
+                  src="img/jpg/bike_type1_desktop_1x.jpg"
+                  srcset="img/jpg/bike_type1_desktop_2x.jpg 2x"
+                  loading="lazy"
+                  alt="фото дорожного велосипеда"
+                />
+              </picture>
+              <p>Дорожный велосипед</p>
+            </li>
+            <li class="types__item">
+              <picture>
+                <source
+                  type="image/webp"
+                  media="(max-width: 768px)"
+                  srcset="
+                    img/webp/bike_type2_tablet_1x.webp 1x,
+                    img/webp/bike_type2_tablet_1x.webp 2x
+                  "
+                />
+                <source
+                  media="(max-width: 768px)"
+                  srcset="
+                    img/jpg/bike_type2_tablet_1x.jpg 1x,
+                    img/jpg/bike_type2_tablet_2x.jpg 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  media="(max-width: 1024px)"
+                  srcset="
+                    img/webp/bike_type2_desktop_1x.webp 1x,
+                    img/webp/bike_type2_desktop_2x.webp 2x
+                  "
+                />
+                <!-- 1х: 342px; 2x: 684px -->
+                <img
+                  width="342"
+                  height="566"
+                  src="img/jpg/bike_type2_desktop_1x.jpg"
+                  srcset="img/jpg/bike_type2_desktop_2x.jpg 2x"
+                  loading="lazy"
+                  alt="фото горного велосипеда"
+                />
+              </picture>
+              <p>Горный велосипед</p>
+            </li>
+            <li class="types__item">
+              <picture>
+                <source
+                  type="image/webp"
+                  media="(max-width: 768px)"
+                  srcset="
+                    img/webp/bike_type3_tablet_1x.webp 1x,
+                    img/webp/bike_type3_tablet_1x.webp 2x
+                  "
+                />
+                <source
+                  media="(max-width: 768px)"
+                  srcset="
+                    img/jpg/bike_type3_tablet_1x.jpg 1x,
+                    img/jpg/bike_type3_tablet_2x.jpg 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  media="(max-width: 1024px)"
+                  srcset="
+                    img/webp/bike_type3_desktop_1x.webp 1x,
+                    img/webp/bike_type3_desktop_2x.webp 2x
+                  "
+                />
+                <!-- 1х: 342px; 2x: 684px -->
+                <img
+                  width="342"
+                  height="513"
+                  src="img/jpg/bike_type3_desktop_1x.jpg"
+                  srcset="img/jpg/bike_type3_desktop_2x.jpg 2x"
+                  loading="lazy"
+                  alt="фото детского велосипеда"
+                />
+              </picture>
+              <p>Детский велосипед</p>
+            </li>
+          </ul>
+        </section>
+
+        <section id="video" class="video">
+          <h2>Видео про велосипеды</h2>
+          <p>
+            В этом видео мы подробно расскажем про особенности выбора велосипеда
+            для себя.
+          </p>
+          <div class="video__screen">
+            <button class="video__button">
+              <svg width="65" height="65" viewBox="0 0 65 65">
+                <use xlink:href="#icon_play"></use>
+              </svg>
             </button>
           </div>
-        </form>
-      </div>
-    </header>
-    <main>
-      <h1 class="visually-hidden">Сайт продажи велосипедов Moon</h1>
+        </section>
+      </main>
 
-      <section id="about" class="about">
-        <h2>Несколько фактов о нас</h2>
-        <ul class="about__list">
-          <li class="about__item">
-            <h3>01</h3>
-            <p>Самый широкий выбор велосипедов!</p>
-          </li>
-          <li class="about__item">
-            <h3>02</h3>
-            <p>Доставка велосипедов по всей России!</p>
-          </li>
-          <li class="about__item">
-            <h3>03</h3>
-            <p>Большой выбор крутых аксессуаров!</p>
-          </li>
-          <li class="about__item">
-            <h3>04</h3>
-            <p>Профессиональные консультации!</p>
-          </li>
-        </ul>
-      </section>
-
-      <section id="types" class="types">
-        <h2>Виды велосипедов</h2>
-        <ul class="types__list">
-          <li class="types__item">
-            <picture>
-              <source
-                type="image/webp"
-                media="(max-width: 768px)"
-                srcset="
-                  img/webp/bike_type1_tablet_1x.webp 1x,
-                  img/webp/bike_type1_tablet_1x.webp 2x
-                "
-              />
-              <source
-                media="(max-width: 768px)"
-                srcset="
-                  img/jpg/bike_type1_tablet_1x.jpg 1x,
-                  img/jpg/bike_type1_tablet_2x.jpg 2x
-                "
-              />
-              <source
-                type="image/webp"
-                media="(max-width: 1024px)"
-                srcset="
-                  img/webp/bike_type1_desktop_1x.webp 1x,
-                  img/webp/bike_type1_desktop_2x.webp 2x
-                "
-              />
-              <!-- 1х: 342px; 2x: 684px -->
-              <img
-                width="342"
-                height="503"
-                src="img/jpg/bike_type1_desktop_1x.jpg"
-                srcset="img/jpg/bike_type1_desktop_2x.jpg 2x"
-                loading="lazy"
-                alt="фото дорожного велосипеда"
-              />
-            </picture>
-            <p>Дорожный велосипед</p>
-          </li>
-          <li class="types__item">
-            <picture>
-              <source
-                type="image/webp"
-                media="(max-width: 768px)"
-                srcset="
-                  img/webp/bike_type2_tablet_1x.webp 1x,
-                  img/webp/bike_type2_tablet_1x.webp 2x
-                "
-              />
-              <source
-                media="(max-width: 768px)"
-                srcset="
-                  img/jpg/bike_type2_tablet_1x.jpg 1x,
-                  img/jpg/bike_type2_tablet_2x.jpg 2x
-                "
-              />
-              <source
-                type="image/webp"
-                media="(max-width: 1024px)"
-                srcset="
-                  img/webp/bike_type2_desktop_1x.webp 1x,
-                  img/webp/bike_type2_desktop_2x.webp 2x
-                "
-              />
-              <!-- 1х: 342px; 2x: 684px -->
-              <img
-                width="342"
-                height="566"
-                src="img/jpg/bike_type2_desktop_1x.jpg"
-                srcset="img/jpg/bike_type2_desktop_2x.jpg 2x"
-                loading="lazy"
-                alt="фото горного велосипеда"
-              />
-            </picture>
-            <p>Горный велосипед</p>
-          </li>
-          <li class="types__item">
-            <picture>
-              <source
-                type="image/webp"
-                media="(max-width: 768px)"
-                srcset="
-                  img/webp/bike_type3_tablet_1x.webp 1x,
-                  img/webp/bike_type3_tablet_1x.webp 2x
-                "
-              />
-              <source
-                media="(max-width: 768px)"
-                srcset="
-                  img/jpg/bike_type3_tablet_1x.jpg 1x,
-                  img/jpg/bike_type3_tablet_2x.jpg 2x
-                "
-              />
-              <source
-                type="image/webp"
-                media="(max-width: 1024px)"
-                srcset="
-                  img/webp/bike_type3_desktop_1x.webp 1x,
-                  img/webp/bike_type3_desktop_2x.webp 2x
-                "
-              />
-              <!-- 1х: 342px; 2x: 684px -->
-              <img
-                width="342"
-                height="513"
-                src="img/jpg/bike_type3_desktop_1x.jpg"
-                srcset="img/jpg/bike_type3_desktop_2x.jpg 2x"
-                loading="lazy"
-                alt="фото детского велосипеда"
-              />
-            </picture>
-            <p>Детский велосипед</p>
-          </li>
-        </ul>
-      </section>
-
-      <section class="video" id="video">
-        <h2>Видео про велосипеды</h2>
+      <footer id="contacts" class="contacts">
+        <h2>Как нас найти?</h2>
         <p>
-          В этом видео мы подробно расскажем про особенности выбора велосипеда
-          для себя.
+          Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19
         </p>
-        <div class="video__screen">
-          <button class="video__button">
-            <svg width="65" height="65" viewBox="0 0 65 65">
-              <use xlink:href="#icon_play"></use>
-            </svg>
-          </button>
-        </div>
-      </section>
-    </main>
+        <div class="contacts__map"></div>
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <a
+              class="contacts__email"
+              href="mailto:puteshestviemechta@gmail.ru"
+              aria-label="электронная почта компании"
+            >
+              <svg width="26" height="20" viewBox="0 0 26 20" fill="none">
+                <use xlink:href="#icon_mail"></use>
+              </svg>
 
-    <footer class="contacts" id="contacts">
-      <h2>Как нас найти?</h2>
-      <p>
-        Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19
-      </p>
-      <div class="contacts__map"></div>
-      <ul class="contacts__list">
-        <li class="contacts__item">
-          <a
-            class="contacts__email"
-            href="mailto:puteshestviemechta@gmail.ru"
-            aria-label="электронная почта компании"
-          >
-            <svg width="26" height="20" viewBox="0 0 26 20" fill="none">
-              <use xlink:href="#icon_mail"></use>
-            </svg>
+              <span class="contacts__email"> puteshestviemechta@gmail.ru </span>
+            </a>
+          </li>
+          <li class="contacts__item">
+            <a
+              class="contacts__telvalue"
+              href="tel:+749978465446"
+              aria-label="телефон компании"
+            >
+              <svg width="22" height="24" viewBox="0 0 22 24" fill="#0ad9c6">
+                <use xlink:href="#icon_tel"></use>
+              </svg>
 
-            <span class="contacts__email"> puteshestviemechta@gmail.ru </span>
-          </a>
-        </li>
-        <li class="contacts__item">
-          <a
-            class="contacts__telvalue"
-            href="tel:+749978465446"
-            aria-label="телефон компании"
-          >
-            <svg width="22" height="24" viewBox="0 0 22 24" fill="#0ad9c6">
-              <use xlink:href="#icon_tel"></use>
-            </svg>
-
-            +7 (499) -784-684-46
-          </a>
-        </li>
-      </ul>
-    </footer>
-
+              +7 (499) -784-684-46
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
     <script src="js/script.js"></script>
   </body>
 </html>

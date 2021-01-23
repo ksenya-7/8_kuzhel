@@ -1,0 +1,82 @@
+.contacts {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 851px;
+}
+
+.contacts h2 {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: -0.005em;
+
+  color: $color-title;
+}
+
+.contacts p {
+  margin: 0;
+  margin-bottom: 41px;
+  padding: 0;
+  width: 500px;
+  font-size: 17px;
+  line-height: 31px;
+  text-align: center;
+
+  color: $color-texttint7;
+}
+
+.contacts__map {
+  margin-bottom: 39px;
+  width: 957px;
+  height: 530px;
+
+  background-color: $color-inputborder;
+  background-image: url("../img/png/map_desktop_1x.png");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/png/map_desktop_2x.png");
+  }
+}
+
+.contacts__list {
+  display: flex;
+  justify-content: space-between;
+  width: 558px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-texttint5;
+}
+
+.contacts__email {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.contacts__email svg {
+  margin-right: 15px;
+}
+
+.contacts__telvalue {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.contacts__telvalue svg {
+  margin-right: 18px;
+}
