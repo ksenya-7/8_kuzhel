@@ -7,14 +7,10 @@
   width: 1166px;
   min-height: 233px;
   margin: 0 auto;
-  margin-top: 131px;
+  // margin-top: 131px;
 
   @include viewport--xl {
     width: 90.23%;
-  }
-
-  @include viewport--lg {
-    margin-top: 70px;
   }
 }
 
@@ -33,16 +29,26 @@
     font-size: 24px;
     line-height: 41px;
   }
+
+  @include viewport--md {
+    margin-top: 73px;
+  }
 }
 
 .about-us__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  width: 1166px;
   margin: 0;
   margin-top: 50px;
   padding: 0;
   list-style: none;
+
+  @include viewport--xl {
+    width: 81%;
+  }
 
   @include viewport--lg {
     width: 556px;
@@ -51,12 +57,16 @@
 
   @include viewport--md {
     flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
     align-items: center;
     width: 90%;
+    padding-bottom: 4px;
   }
 }
 
 .about-us__list h3 {
+  margin: 0;
   font-weight: 700;
   font-size: 28px;
   line-height: 38px;
@@ -68,12 +78,34 @@
   @include viewport--lg {
     margin-bottom: 18px;
   }
+
+  @include viewport--md {
+    margin-bottom: 0;
+  }
 }
 
 .about-us__item {
   width: 263px;
 
   @include viewport--lg {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+  }
+
+  @include viewport--md {
+    margin-bottom: 35px;
+    min-height: 125px;
+  }
+}
+
+.about-us__item p {
+  margin: 0;
+  margin-top: 15px;
+  margin-bottom: 20px;
+
+
+  @include viewport--md {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 18px;
   }
 }

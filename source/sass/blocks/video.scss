@@ -1,0 +1,141 @@
+.video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  width: 100%;
+  min-height: 706px;
+  background-color: $color-videoback;
+
+  @include viewport--lg {
+    min-height: 414px;
+    font-size: 24px;
+  }
+
+  @include viewport--md {
+    min-height: 384px;
+  }
+}
+
+.video h2 {
+  margin: 0;
+  margin-top: 120px;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: -0.005em;
+  color: $color-fonbasic;
+
+  @include viewport--lg {
+    margin-top: 70px;
+    font-size: 24px;
+  }
+
+  @include viewport--md {
+    width: 288px;
+    margin-top: 85px;
+  }
+}
+
+.video p {
+  width: 340px;
+  margin: 0;
+  margin-top: 20px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: -0.005em;
+  color: $color-fonbasictint8;
+
+  @include viewport--lg {
+    width: 429px;
+  }
+
+  @include viewport--md {
+    width: 288px;
+  }
+}
+
+.video__screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 282px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  margin: 0;
+  padding: 0;
+  width: 929px;
+  height: 522px;
+  background-color: $color-text;
+  background-image: url("../img/jpg/bike_video_desktop_1x.jpg");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/jpg/bike_video_desktop_2x.jpg");
+  }
+
+  @include viewport--xl {
+    width: 79.67%;
+  }
+
+  @include viewport--lg {
+    top: 217px;
+    width: 65.5%;
+    height: 282px;
+
+    background-image: url("../img/jpg/bike_video_tablet_1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/jpg/bike_video_tablet_2x.jpg");
+    }
+  }
+
+  @include viewport--md {
+    top: 271px;
+    width: 288px;
+    height: 162px;
+    background-image: url("../img/jpg/bike_video_mobile_1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/jpg/bike_video_mobile_2x.jpg");
+    }
+  }
+}
+
+.video__button {
+  margin: 0;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+    transition: $transition-time;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+.video__button svg {
+  width: 65px;
+  height: 65px;
+
+  @include viewport--lg {
+    width: 91px;
+    height: 91px;
+  }
+
+  @include viewport--md {
+    width: 65px;
+    height: 65px;
+  }
+}

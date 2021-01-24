@@ -1,18 +1,18 @@
 .types {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  // justify-content: center;
   align-items: center;
 
   width: 100%;
-  min-height: 1038px;
+  min-height: 1040px;
   margin-top: 131px;
-  padding-top: 149px;
+  padding-top: 151px;
   background-color: $color-typeback;
 
   @include viewport--lg {
-    min-height: 949px;
-    margin-top: 70px;
+    min-height: 945px;
+    margin-top: 30px;
     padding-top: 50px;
     font-size: 24px;
     line-height: 41px;
@@ -20,7 +20,8 @@
 
   @include viewport--md {
     justify-content: flex-start;
-    min-height: 1319px;
+    min-height: 1316px;
+    // padding-top: 55px;
   }
 }
 
@@ -47,7 +48,7 @@
 
   width: 1126px;
   margin: 0;
-  margin-top: 61px;
+  margin-top: 51px;
   padding: 0;
   list-style: none;
 
@@ -58,7 +59,7 @@
   @include viewport--lg {
     justify-content: center;
     width: 590px;
-    margin-top: 30px;
+    margin-top: 28px;
   }
 
   @include viewport--md {
@@ -83,13 +84,13 @@
     // width: 270px;
     width: 45.76%;
     min-height: 356px;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
   }
 
   @include viewport--md {
     width: 270px;
     min-height: 356px;
-    margin-bottom: 50px;
+    margin-bottom: 37px;
   }
 }
 
@@ -102,9 +103,19 @@
   }
 }
 
+.types__item p {
+  margin: 0;
+  margin-top: 17px;
+
+  // @include viewport--lg {
+
+  // }
+}
+
 .types__item--bigcurcle {
   position: relative;
   z-index: 1;
+  margin-top: 10px;
 
   &::before {
     content: "";
@@ -119,7 +130,7 @@
 
     @include viewport--lg {
       left: -37px;
-      bottom: -28px;
+      top: 200px;
       width: 127px;
       height: 127px;
       box-shadow: inset 0 0 0 18px $color-button;
@@ -127,12 +138,13 @@
 
     @include viewport--md {
       left: -24px;
-      top: 207px;
+      top: 202px;
     }
   }
 
   @include viewport--lg {
     margin-right: 50px;
+    margin-top: 0;
   }
 
   @include viewport--md {
@@ -142,7 +154,7 @@
 
 .types__item--shift {
   position: relative;
-  margin-top: 29px;
+  margin-top: 40px;
 
   @include viewport--lg {
     margin-top: 0;
@@ -169,7 +181,7 @@
     position: absolute;
     z-index: 1;
     right: -23px;
-    bottom: 55px;
+    top: 540px;
     width: 47px;
     height: 47px;
     box-shadow: inset 0 0 0 8px $color-button;

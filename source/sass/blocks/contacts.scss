@@ -2,23 +2,25 @@
   align-self: flex-end;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  // justify-content: center;
   align-items: center;
   width: 100%;
   min-height: 851px;
+  margin-top: 250px;
 
   @include viewport--lg {
     min-height: 744px;
+    margin-top: 157px;
   }
 
   @include viewport--md {
     min-height: 563px;
+    margin-top: 120px;
   }
 }
 
 .contacts h2 {
   margin: 0;
-  margin-bottom: 30px;
   padding: 0;
   font-weight: 600;
   font-size: 30px;
@@ -28,7 +30,6 @@
   color: $color-title;
 
   @include viewport--lg {
-    margin-bottom: 20px;
     font-size: 24px;
   }
 
@@ -38,31 +39,30 @@
 }
 
 .contacts p {
-  margin: 0;
-  margin-bottom: 41px;
-  padding: 0;
   width: 500px;
+  margin: 0;
+  margin-top: 30px;
+  padding: 0;
+
+  color: $color-texttint7;
   font-size: 17px;
   line-height: 31px;
   text-align: center;
 
-  color: $color-texttint7;
-
   @include viewport--lg {
     width: 629px;
-    margin-bottom: 20px;
+    margin-top: 20px;
   }
 
   @include viewport--md {
     width: 245px;
-    margin-bottom: 25px;
   }
 }
 
 .contacts__map {
-  margin-bottom: 39px;
   width: 957px;
   height: 530px;
+  margin-top: 41px;
 
   background-color: $color-inputborder;
   background-image: url("../img/png/map_desktop_1x.png");
@@ -81,7 +81,7 @@
   @include viewport--lg {
     width: 90.89%;
     height: 545px;
-    margin-bottom: 20px;
+    margin-top: 20px;
 
     background-image: url("../img/png/map_tablet_1x.png");
 
@@ -93,7 +93,7 @@
   @include viewport--md {
     width: 100%;
     height: 250px;
-    margin-bottom: 31px;
+    margin-top: 19px;
 
     background-image: url("../img/png/map_mobile_1x.png");
 
@@ -108,6 +108,7 @@
   justify-content: space-between;
   width: 558px;
   margin: 0;
+  margin-top: 39px;
   padding: 0;
   list-style: none;
 
@@ -115,9 +116,15 @@
   line-height: 22px;
   color: $color-texttint5;
 
+  @include viewport--lg {
+    margin-top: 20px;
+  }
+
   @include viewport--md {
     flex-direction: column;
+    align-items: flex-start;
     width: 288px;
+    margin-top: 31px;
   }
 }
 
@@ -130,6 +137,15 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 22px;
+    margin-left: 14px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+    transition: $transition-time;
+    outline: none;
+    cursor: pointer;
   }
 }
 
@@ -141,9 +157,19 @@
   display: flex;
   justify-content: space-between;
   margin: 0;
+  margin-right: 20px;
 
   @include viewport--md {
     justify-content: center;
+    margin-left: 43px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+    transition: $transition-time;
+    outline: none;
+    cursor: pointer;
   }
 }
 
