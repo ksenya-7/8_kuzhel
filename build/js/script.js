@@ -1,6 +1,7 @@
 'use strict';
 var COUNTRY_CODE = '+7';
 var length = COUNTRY_CODE.length;
+
 var nav = document.querySelector('.site-navigation');
 var navToggle = document.querySelector('.main-header__toggle');
 var links = document.querySelectorAll('.site-navigation__item a');
@@ -78,6 +79,7 @@ if (nav) {
     navToggle.classList.toggle('main-header__toggle--active');
   });
 }
+
 
 if (links) {
   for (var j = 0; j < links.length; j++) {

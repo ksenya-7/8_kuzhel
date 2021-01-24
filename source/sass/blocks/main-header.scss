@@ -292,5 +292,6 @@
   &:focus {
     cursor: pointer;
     border: 1px solid $color-button;
+    outline: none;
   }
 }

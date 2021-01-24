@@ -31,7 +31,9 @@ gulp.task("css", function () {
 
 gulp.task('js', function () {
   return gulp.src('source/js/**/*.js').pipe(
-    server.reload());
+    server.reload({
+      stream: true,
+    }));
 });
 
 gulp.task("server", function () {

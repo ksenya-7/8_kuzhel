@@ -116,6 +116,14 @@
 
     width: 100%;
   }
+
+  &:hover,
+  &:focus {
+    color: $color-button;
+    transition: $transition-time;
+    outline: none;
+    cursor: pointer;
+  }
 }
 
 .site-navigation__icon {
