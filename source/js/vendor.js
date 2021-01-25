@@ -220,7 +220,3 @@ if (typeof module !== 'undefined') {
 } else {
   window.MoveTo = MoveTo;
 }
-
-window.vendor = {
-  MoveTo
-};

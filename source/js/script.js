@@ -90,20 +90,6 @@ if (links) {
   });
 }
 
-// скролл для safari
-// var moveTo = new window.vendor.MoveTo();
-// var targets = document.querySelectorAll('.target-js');
-
-// if (links && targets && links.length === targets.length) {
-//   for (var i = 0; i < links.length; i++) {
-//     links[i].forEach(function (element) {
-//       element.addEventListener('click', function () {
-//         moveTo.registerTrigger(targets[i]);
-//       });
-//     });
-//   }
-// }
-
 // валидация полей формы
 var MIN_TEXT_LENGTH = 3;
 var TEL_LENGTH = 17;
@@ -139,3 +125,16 @@ telInput.addEventListener('input', function (evt) {
 
   textInput.reportValidity();
 });
+
+
+// скролл
+var moveTo = new window.MoveTo();
+var targets = document.querySelectorAll('.target-js');
+
+if (links && targets && links.length === targets.length) {
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function () {
+      moveTo.move(targets[i]);
+    });
+  }
+}

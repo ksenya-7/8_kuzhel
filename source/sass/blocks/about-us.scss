@@ -10,7 +10,7 @@
   padding-bottom: 131px;
 
   @include viewport--xl {
-    width: 90.63%;
+    width: 96%;
   }
 
   @include viewport--lg {
@@ -56,7 +56,7 @@
   list-style: none;
 
   @include viewport--xl {
-    width: 81%;
+    width: auto;
   }
 
   @include viewport--lg {
@@ -97,6 +97,10 @@
   width: 263px;
   margin-right: 38px;
 
+  @include viewport--xl {
+    margin-right: calc((70% - 263px*2) / 2);
+  }
+
   @include viewport--lg {
     margin-bottom: 22px;
     margin-right: 30px;
@@ -111,6 +115,17 @@
 
 .about-us__item:nth-child(4n) {
   margin-right: 0;
+
+  @include viewport--xl {
+    margin-bottom: inherit;
+  }
+}
+
+.about-us__item:nth-child(3n) {
+
+  @include viewport--xl {
+    margin-right: 0;
+  }
 
   @include viewport--lg {
     margin-bottom: inherit;
