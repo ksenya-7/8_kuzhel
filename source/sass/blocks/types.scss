@@ -6,13 +6,12 @@
 
   width: 100%;
   min-height: 1040px;
-  margin-top: 131px;
-  padding-top: 151px;
+  padding: 151px 0;
   background-color: $color-typeback;
 
   @include viewport--lg {
     min-height: 945px;
-    margin-top: 30px;
+
     padding-top: 50px;
     font-size: 24px;
     line-height: 41px;
@@ -44,7 +43,7 @@
 .types__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  // justify-content: space-between;
 
   width: 1126px;
   margin: 0;
@@ -72,6 +71,7 @@
 .types__item {
   margin: 0;
   margin-bottom: 20px;
+  margin-right: 50px;
   padding: 0;
 
   font-weight: 600;
@@ -81,7 +81,6 @@
   }
 
   @include viewport--lg {
-    // width: 270px;
     width: 45.76%;
     min-height: 356px;
     margin-bottom: 45px;
@@ -91,7 +90,34 @@
     width: 270px;
     min-height: 356px;
     margin-bottom: 37px;
+    margin-right: 0;
   }
+}
+
+.types__item:nth-child(3n) {
+  margin-right: 0;
+
+  @include viewport--lg {
+    margin-right: 50px;
+  }
+
+  @include viewport--md {
+    margin-right: 0;
+  }
+}
+
+.types__item:nth-child(2n) {
+  @include viewport--lg {
+    margin-right: 0;
+  }
+
+  @include viewport--md {
+    margin-right: 0;
+  }
+}
+
+.types__item:last-child {
+  margin-right: 0;
 }
 
 .types__item img {
@@ -143,7 +169,7 @@
   }
 
   @include viewport--lg {
-    margin-right: 50px;
+    // margin-right: 50px;
     margin-top: 0;
   }
 

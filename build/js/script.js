@@ -1,10 +1,7 @@
 'use strict';
+// маска для ввода номера телефона
 var COUNTRY_CODE = '+7';
 var length = COUNTRY_CODE.length;
-
-var nav = document.querySelector('.site-navigation');
-var navToggle = document.querySelector('.main-header__toggle');
-var links = document.querySelectorAll('.site-navigation__item a');
 
 var onInputPhoneInput = function (e) {
   var matrix = COUNTRY_CODE + '(___) ___ __ __';
@@ -65,6 +62,10 @@ var initPhoneMask = function () {
 
 initPhoneMask();
 
+// управление меню при навигации
+var nav = document.querySelector('.site-navigation');
+var navToggle = document.querySelector('.main-header__toggle');
+var links = document.querySelectorAll('.site-navigation__link');
 
 if (navToggle) {
   navToggle.classList.remove('main-header__toggle--nojs');
@@ -80,12 +81,28 @@ if (nav) {
   });
 }
 
-
 if (links) {
-  for (var j = 0; j < links.length; j++) {
-    links[j].addEventListener('click', function () {
+  links.forEach(function (element) {
+    element.addEventListener('click', function () {
       nav.classList.remove('site-navigation--open');
       navToggle.classList.remove('main-header__toggle--active');
     });
-  }
+  });
 }
+
+// скролл к разделам из навигации
+
+// var sections = document.querySelectorAll('.scroll-js');
+
+
+// if (links && sections && links.length === sections.length) {
+//   for (var i = 0; i < links.length; i++) {
+//     // console.log(links[i]);
+//     // console.log(sections[i]);
+//     links[i].addEventListener('click', function (e) {
+//       // sections[i].scrollIntoView();
+//       e.preventDefault();
+//       document.querySelector('.about-us').scrollIntoView();
+//     });
+//   }
+// }

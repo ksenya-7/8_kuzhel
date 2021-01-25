@@ -6,15 +6,18 @@
 
   width: 100%;
   min-height: 706px;
+  padding-bottom: 480px;
   background-color: $color-videoback;
 
   @include viewport--lg {
     min-height: 414px;
+    padding-bottom: 237px;
     font-size: 24px;
   }
 
   @include viewport--md {
     min-height: 384px;
+    padding-bottom: 163px;
   }
 }
 
@@ -63,7 +66,7 @@
   align-items: center;
 
   position: absolute;
-  top: 282px;
+  bottom: -98px;
   left: 50%;
   transform: translateX(-50%);
 

@@ -61,8 +61,8 @@
 
 .site-navigation__list {
   display: flex;
-  // box-shadow: 0 0 0 3px rgb(186, 33, 216);
-  justify-content: space-between;
+  // justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
 
   width: 833px;
@@ -93,6 +93,7 @@
 .site-navigation__item {
   display: flex;
   margin-top: 10px;
+  margin-right: 135px;
 
   @include viewport--lg {
     justify-content: space-between;
@@ -102,9 +103,14 @@
     min-height: 60px;
     width: 100%;
     margin-bottom: 20px;
+    margin-right: 0;
     padding: 0 25px 0 16px;
     background-color: $color-menuback;
   }
+}
+
+.site-navigation__item:nth-child(4n) {
+  margin-right: 0;
 }
 
 .site-navigation__link {

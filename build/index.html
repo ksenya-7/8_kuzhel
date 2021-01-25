@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="продажа горных, дорожных и детских велосипедов">
     <title>Велосипеды Moon</title>
     <link rel="preload" href="fonts/opensans300.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/opensans400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -96,12 +97,12 @@
               <ul class="main-header__list">
                 <li class="main-header__item">
                   <label>
-                    <input id="user-name" type="text" name="user-name" placeholder="Введите Ваше Имя" required="">
+                    <input id="user-name" type="text" name="user-name" placeholder="Введите Ваше Имя" aria-label="поле для ввода имени пользователя" required="">
                   </label>
                 </li>
                 <li class="main-header__item">
                   <label>
-                    <input data-type="tel" id="user-tel" type="tel" name="user-tel" placeholder="Введите Ваш номер телефона" required="">
+                    <input data-type="tel" id="user-tel" type="tel" name="user-tel" placeholder="Введите Ваш номер телефона" aria-label="поле для ввода телефона пользователя" required="">
                   </label>
                 </li>
               </ul>
@@ -119,19 +120,19 @@
           <h2>Несколько фактов о нас</h2>
           <ul class="about-us__list">
             <li class="about-us__item">
-              <h3>01</h3>
+              <span>01</span>
               <p>Самый широкий выбор велосипедов!</p>
             </li>
             <li class="about-us__item">
-              <h3>02</h3>
+              <span>02</span>
               <p>Доставка велосипедов по&nbsp;всей России!</p>
             </li>
             <li class="about-us__item">
-              <h3>03</h3>
+              <span>03</span>
               <p>Большой выбор крутых аксессуаров!</p>
             </li>
             <li class="about-us__item">
-              <h3>04</h3>
+              <span>04</span>
               <p>Профессиональные консультации!</p>
             </li>
           </ul>
@@ -207,7 +208,7 @@
             для себя.
           </p>
           <div class="video__screen">
-            <button class="video__button">
+            <button class="video__button" type="button" aria-label="запуск просмотра видео">
               <svg width="65" height="65" viewBox="0 0 65 65">
                 <use xlink:href="#icon_play"></use>
               </svg>
