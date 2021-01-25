@@ -89,3 +89,53 @@ if (links) {
     });
   });
 }
+
+// скролл для safari
+// var moveTo = new window.vendor.MoveTo();
+// var targets = document.querySelectorAll('.target-js');
+
+// if (links && targets && links.length === targets.length) {
+//   for (var i = 0; i < links.length; i++) {
+//     links[i].forEach(function (element) {
+//       element.addEventListener('click', function () {
+//         moveTo.registerTrigger(targets[i]);
+//       });
+//     });
+//   }
+// }
+
+// валидация полей формы
+var MIN_TEXT_LENGTH = 3;
+var TEL_LENGTH = 17;
+var textInput = document.querySelector('.main-header__item input[type="text"]');
+var telInput = document.querySelector('.main-header__item input[type="tel"]');
+
+textInput.addEventListener('input', function (evt) {
+  var text = textInput.value;
+  var isLengthOfText = text.length < MIN_TEXT_LENGTH;
+  evt.preventDefault();
+  if (isLengthOfText) {
+    textInput.setCustomValidity('Минимальная длина имени 3 символа.');
+    textInput.style.outline = '1px solid red';
+  } else {
+    textInput.setCustomValidity('');
+    textInput.style.outline = 'none';
+  }
+
+  textInput.reportValidity();
+});
+
+telInput.addEventListener('input', function (evt) {
+  var tel = telInput.value;
+  var isLengthOfTel = tel.length !== TEL_LENGTH;
+  evt.preventDefault();
+  if (isLengthOfTel) {
+    telInput.setCustomValidity('Количество цифр вместе с кодом – 10.');
+    telInput.style.outline = '1px solid red';
+  } else {
+    telInput.setCustomValidity('');
+    telInput.style.outline = 'none';
+  }
+
+  textInput.reportValidity();
+});
