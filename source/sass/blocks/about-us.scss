@@ -10,8 +10,15 @@
   padding-bottom: 131px;
 
   @include viewport--xl {
-    width: 90.23%;
-    padding-bottom: 30px;
+    width: 90.63%;
+  }
+
+  @include viewport--lg {
+    padding-bottom: 28px;
+  }
+
+  @include viewport--md {
+    padding-bottom: 67px;
   }
 }
 
@@ -26,13 +33,14 @@
   color: $color-title;
 
   @include viewport--lg {
-    margin-top: 70px;
+    margin-top: 10px;
     font-size: 24px;
     line-height: 41px;
   }
 
   @include viewport--md {
-    margin-top: 73px;
+    margin-top: 11px;
+    max-width: 290px;
   }
 }
 
@@ -90,7 +98,7 @@
   margin-right: 38px;
 
   @include viewport--lg {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
     margin-right: 30px;
   }
 
@@ -119,7 +127,6 @@
   margin: 0;
   margin-top: 15px;
   margin-bottom: 20px;
-
 
   @include viewport--md {
     margin-top: 10px;

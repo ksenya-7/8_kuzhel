@@ -36,8 +36,10 @@
   }
 
   @include viewport--md {
-    width: 288px;
+    align-self: start;
+    width: 295px;
     margin-top: 85px;
+    padding-left: 12px;
   }
 }
 

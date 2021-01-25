@@ -52,6 +52,7 @@
   font-size: 17px;
   line-height: 31px;
   text-align: center;
+  letter-spacing: 0;
 
   @include viewport--lg {
     width: 629px;
@@ -59,7 +60,7 @@
   }
 
   @include viewport--md {
-    width: 245px;
+    width: 269px;
   }
 }
 
@@ -109,7 +110,8 @@
 
 .contacts__list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  // justify-content: space-between;
   width: 558px;
   margin: 0;
   margin-top: 39px;
@@ -136,11 +138,15 @@
   display: flex;
   justify-content: space-between;
   margin: 0;
+  margin-right: 90px;
+
+  letter-spacing: 0;
 
   @include viewport--md {
     justify-content: center;
     align-items: center;
-    margin-bottom: 22px;
+
+    margin-right: 0;
     margin-left: 14px;
   }
 
@@ -155,17 +161,24 @@
 
 .contacts__email svg {
   margin-right: 15px;
+
+  @include viewport--md {
+    margin-top: 3px;
+  }
 }
 
 .contacts__telvalue {
   display: flex;
   justify-content: space-between;
   margin: 0;
-  margin-right: 20px;
+  margin-right: 0;
+
+  letter-spacing: 0;
 
   @include viewport--md {
     justify-content: center;
     margin-left: 43px;
+    margin-top: 24px;
   }
 
   &:hover,
@@ -179,4 +192,9 @@
 
 .contacts__telvalue svg {
   margin-right: 18px;
+
+  @include viewport--md {
+    margin-right: 15px;
+    margin-top: -3px;
+  }
 }

@@ -6,13 +6,13 @@
 
   width: 100%;
   min-height: 1040px;
-  padding: 151px 0;
+  padding: 151px 0 130px;
   background-color: $color-typeback;
 
   @include viewport--lg {
     min-height: 945px;
 
-    padding-top: 50px;
+    padding: 50px 0 22px;
     font-size: 24px;
     line-height: 41px;
   }
@@ -20,7 +20,7 @@
   @include viewport--md {
     justify-content: flex-start;
     min-height: 1316px;
-    // padding-top: 55px;
+    padding: 50px 0 12px;
   }
 }
 
@@ -132,6 +132,9 @@
 .types__item p {
   margin: 0;
   margin-top: 17px;
+
+  font-weight: 600;
+  font-size: 22px;
 
   // @include viewport--lg {
 
