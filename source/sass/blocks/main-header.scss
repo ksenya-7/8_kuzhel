@@ -270,9 +270,8 @@
   min-height: 48px;
   margin: 0;
   margin-bottom: 20px;
-  padding: 0;
-  padding-top: 5px;
-  padding-left: 29px;
+  padding: 10px 29px;
+
   border: 1px solid $color-inputborder;
   border-radius: 4px;
 
@@ -282,11 +281,11 @@
   color: $color-input;
 
   @include viewport--lg {
-    padding-left: 21px;
+    padding: 10px 21px;
   }
 
   @include viewport--md {
-    padding-left: 26px;
+    padding: 10px 26px;
   }
 
   &:hover,

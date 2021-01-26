@@ -95,36 +95,70 @@ var MIN_TEXT_LENGTH = 3;
 var TEL_LENGTH = 17;
 var textInput = document.querySelector('.main-header__item input[type="text"]');
 var telInput = document.querySelector('.main-header__item input[type="tel"]');
+var buttonSubmit = document.querySelector('.main-header__button');
 
-textInput.addEventListener('input', function (evt) {
-  var text = textInput.value;
-  var isLengthOfText = text.length < MIN_TEXT_LENGTH;
-  evt.preventDefault();
-  if (isLengthOfText) {
-    textInput.setCustomValidity('Минимальная длина имени 3 символа.');
-    textInput.style.outline = '1px solid red';
-  } else {
-    textInput.setCustomValidity('');
-    textInput.style.outline = 'none';
-  }
 
-  textInput.reportValidity();
-});
+if (textInput && telInput && buttonSubmit) {
+  buttonSubmit.addEventListener('click', function (evt) {
+    var text = textInput.value;
+    var isLengthOfText = text.length < MIN_TEXT_LENGTH;
+    var tel = telInput.value;
+    console.log(tel.length);
+    var isLengthOfTel = tel.length !== TEL_LENGTH;
 
-telInput.addEventListener('input', function (evt) {
-  var tel = telInput.value;
-  var isLengthOfTel = tel.length !== TEL_LENGTH;
-  evt.preventDefault();
-  if (isLengthOfTel) {
-    telInput.setCustomValidity('Количество цифр вместе с кодом – 10.');
-    telInput.style.outline = '1px solid red';
-  } else {
-    telInput.setCustomValidity('');
-    telInput.style.outline = 'none';
-  }
+    if (isLengthOfText) {
+      evt.preventDefault();
+      textInput.setCustomValidity('Минимальная длина имени 3 буквы.');
+      textInput.style.border = '1px solid red';
+    } else if (isLengthOfTel) {
+      evt.preventDefault();
+      telInput.setCustomValidity('Введите номер телефона по образцу: +7(123) 456 78 90');
+      telInput.style.border = '1px solid red';
+    } else {
+      telInput.setCustomValidity('');
+      telInput.style.border = '1px solid #c9ccd4';
+      textInput.setCustomValidity('');
+      textInput.style.border = '1px solid #c9ccd4';
+    }
 
-  textInput.reportValidity();
-});
+    textInput.reportValidity();
+    telInput.reportValidity();
+  });
+}
+
+// if (textInput) {
+//   textInput.addEventListener('input', function (evt) {
+//     var text = textInput.value;
+//     var isLengthOfText = text.length < MIN_TEXT_LENGTH;
+//     evt.preventDefault();
+//     if (isLengthOfText) {
+//       textInput.setCustomValidity('Минимальная длина имени 3 символа.');
+//       textInput.style.border = '1px solid red';
+//     } else {
+//       textInput.setCustomValidity('');
+//       textInput.style.border = '1px solid #c9ccd4';
+//     }
+
+//     textInput.reportValidity();
+//   });
+// }
+
+// if (telInput) {
+//   telInput.addEventListener('input', function (evt) {
+//     var tel = telInput.value;
+//     var isLengthOfTel = tel.length !== TEL_LENGTH;
+//     evt.preventDefault();
+//     if (isLengthOfTel) {
+//       telInput.setCustomValidity('Количество цифр вместе с кодом – 10.');
+//       telInput.style.border = '1px solid red';
+//     } else {
+//       telInput.setCustomValidity('');
+//       telInput.style.border = '1px solid #c9ccd4';
+//     }
+
+//     telInput.reportValidity();
+//   });
+// }
 
 
 // скролл

@@ -52,12 +52,12 @@
           aria-label="навигация для открытия выпадающего меню"
         >
           <span class="main-header__btn-close">
-            <svg width="24" height="25" viewBox="0 0 24 25">
+            <svg width="24" height="25">
               <use xlink:href="#icon_close"></use>
             </svg>
           </span>
           <span class="main-header__btn-open">
-            <svg width="24" height="14" viewBox="0 0 24 14">
+            <svg width="24" height="14">
               <use xlink:href="#icon_open"></use>
             </svg>
           </span>
@@ -66,56 +66,40 @@
         <nav class="main-header__nav site-navigation site-navigation--nojs">
           <ul class="site-navigation__list">
             <li class="site-navigation__item">
-              <a
-                href="#about-us"
-                class="site-navigation__link"
-                aria-label="переход к разделу 'О нас'"
-              >
+              <a href="#about-us" class="site-navigation__link">
                 О нас
                 <span class="site-navigation__icon">
-                  <svg width="8" height="12" viewBox="0 0 8 12">
+                  <svg width="8" height="12">
                     <use xlink:href="#icon_arrow"></use>
                   </svg>
                 </span>
               </a>
             </li>
             <li class="site-navigation__item">
-              <a
-                href="#types"
-                class="site-navigation__link"
-                aria-label="переход к разделу 'Виды велосипедов'"
-              >
+              <a href="#types" class="site-navigation__link">
                 Виды велосипедов
                 <span class="site-navigation__icon">
-                  <svg width="8" height="12" viewBox="0 0 8 12">
+                  <svg width="8" height="12">
                     <use xlink:href="#icon_arrow"></use>
                   </svg>
                 </span>
               </a>
             </li>
             <li class="site-navigation__item">
-              <a
-                href="#video"
-                class="site-navigation__link"
-                aria-label="переход к разделу 'Видео про велосипеды'"
-              >
+              <a href="#video" class="site-navigation__link">
                 Видео про велосипеды
                 <span class="site-navigation__icon">
-                  <svg width="8" height="12" viewBox="0 0 8 12">
+                  <svg width="8" height="12">
                     <use xlink:href="#icon_arrow"></use>
                   </svg>
                 </span>
               </a>
             </li>
             <li class="site-navigation__item">
-              <a
-                href="#contacts"
-                class="site-navigation__link"
-                aria-label="переход к разделу 'Контакты'"
-              >
+              <a href="#contacts" class="site-navigation__link">
                 Контакты
                 <span class="site-navigation__icon">
-                  <svg width="8" height="12" viewBox="0 0 8 12">
+                  <svg width="8" height="12">
                     <use xlink:href="#icon_arrow"></use>
                   </svg>
                 </span>
@@ -127,7 +111,7 @@
         <div class="main-header__intro">
           <div class="main-header__promo">
             <a>
-              <svg width="68" height="21" viewBox="0 0 68 21">
+              <svg width="68" height="21">
                 <use xlink:href="#logo_moon"></use>
               </svg>
             </a>
@@ -137,35 +121,36 @@
             </p>
           </div>
 
-          <form action="https://echo.htmlacademy.ru" method="get">
+          <form
+            action="https://echo.htmlacademy.ru"
+            method="post"
+            autocomplete="off"
+          >
             <div class="main-header__form">
               <p>Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
 
               <ul class="main-header__list">
                 <li class="main-header__item">
-                  <label>
-                    <input
-                      id="user-name"
-                      type="text"
-                      name="user-name"
-                      placeholder="Введите Ваше Имя"
-                      aria-label="поле для ввода имени пользователя"
-                      required
-                    />
-                  </label>
+                  <input
+                    id="user-name"
+                    type="text"
+                    name="user-name"
+                    minlength="3"
+                    placeholder="Введите Ваше Имя"
+                    aria-label="поле для ввода имени пользователя"
+                    required
+                  />
                 </li>
                 <li class="main-header__item">
-                  <label>
-                    <input
-                      data-type="tel"
-                      id="user-tel"
-                      type="tel"
-                      name="user-tel"
-                      placeholder="Введите Ваш номер телефона"
-                      aria-label="поле для ввода телефона пользователя"
-                      required
-                    />
-                  </label>
+                  <input
+                    data-type="tel"
+                    id="user-tel"
+                    type="tel"
+                    name="user-tel"
+                    placeholder="Введите Ваш номер телефона"
+                    aria-label="поле для ввода телефона пользователя"
+                    required
+                  />
                 </li>
               </ul>
               <button
@@ -333,7 +318,7 @@
               type="button"
               aria-label="запуск просмотра видео"
             >
-              <svg width="65" height="65" viewBox="0 0 65 65">
+              <svg width="65" height="65">
                 <use xlink:href="#icon_play"></use>
               </svg>
             </button>
@@ -354,7 +339,7 @@
               href="mailto:puteshestviemechta@gmail.ru"
               aria-label="электронная почта компании"
             >
-              <svg width="26" height="20" viewBox="0 0 26 20" fill="none">
+              <svg width="26" height="20">
                 <use xlink:href="#icon_mail"></use>
               </svg>
 
@@ -367,7 +352,7 @@
               href="tel:+749978465446"
               aria-label="телефон компании"
             >
-              <svg width="22" height="24" viewBox="0 0 22 24" fill="#0ad9c6">
+              <svg width="22" height="24">
                 <use xlink:href="#icon_tel"></use>
               </svg>
 

@@ -91,7 +91,7 @@
   }
 
   @include viewport--lg {
-    top: 217px;
+    bottom: -84px;
     width: 65.5%;
     height: 282px;
 
@@ -103,7 +103,7 @@
   }
 
   @include viewport--md {
-    top: 271px;
+    bottom: -49px;
     width: 288px;
     height: 162px;
     background-image: url("../img/jpg/bike_video_mobile_1x.jpg");

@@ -9,6 +9,10 @@
   padding: 151px 0 130px;
   background-color: $color-typeback;
 
+  @include viewport--xl {
+    min-height: 845px;
+  }
+
   @include viewport--lg {
     min-height: 945px;
 
@@ -217,7 +221,7 @@
     box-shadow: inset 0 0 0 8px $color-button;
 
     @include viewport--xl {
-      top: 86%;
+      top: 83%;
     }
 
     @include viewport--lg {

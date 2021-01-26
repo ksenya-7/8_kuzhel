@@ -56,7 +56,7 @@
   list-style: none;
 
   @include viewport--xl {
-    width: auto;
+    width: 90%;
   }
 
   @include viewport--lg {
@@ -98,7 +98,7 @@
   margin-right: 38px;
 
   @include viewport--xl {
-    margin-right: calc((70% - 263px*2) / 2);
+    margin-right: calc((100% - 263px*3)/2);
   }
 
   @include viewport--lg {
