@@ -65,6 +65,7 @@ initPhoneMask();
 // управление меню при навигации и скролл
 var nav = document.querySelector('.site-navigation');
 var navToggle = document.querySelector('.main-header__toggle');
+var links = document.querySelectorAll('.site-navigation__link');
 
 if (navToggle) {
   navToggle.classList.remove('main-header__toggle--nojs');
@@ -80,26 +81,15 @@ if (nav) {
   });
 }
 
-var moveTo = new window.MoveTo({
-  duration: 1000,
-  easing: 'easeOutQuart',
-});
-
-var initInnerLinks = function () {
-  var links = document.querySelectorAll('.site-navigation__link');
-
-  if (links.length) {
-    links.forEach(function (link) {
-      link.addEventListener('click', function () {
-        moveTo.registerTrigger(link);
-        nav.classList.remove('site-navigation--open');
-        navToggle.classList.remove('main-header__toggle--active');
-      });
+if (links) {
+  links.forEach(function (element) {
+    element.addEventListener('click', function () {
+      nav.classList.remove('site-navigation--open');
+      navToggle.classList.remove('main-header__toggle--active');
     });
-  }
-};
+  });
+}
 
-initInnerLinks();
 
 // валидация полей формы
 var MIN_TEXT_LENGTH = 3;
@@ -109,22 +99,26 @@ var telInput = document.querySelector('.main-header__item input[type="tel"]');
 var buttonSubmit = document.querySelector('.main-header__button');
 
 
-if (textInput && telInput && buttonSubmit) {
+if (buttonSubmit) {
   buttonSubmit.addEventListener('click', function (evt) {
-    var text = textInput.value;
-    var isLengthOfText = text.length < MIN_TEXT_LENGTH;
-    var tel = telInput.value;
-    var isLengthOfTel = tel.length !== TEL_LENGTH;
+    if (textInput) {
+      var text = textInput.value;
+      var isLengthOfText = text.length < MIN_TEXT_LENGTH;
+    }
+    if (telInput) {
+      var tel = telInput.value;
+      var isLengthOfTel = tel.length !== TEL_LENGTH;
+    }
 
     if (isLengthOfText) {
       evt.preventDefault();
-      textInput.style.border = '1px solid red';
+      textInput.classList.add('js-invalid');
     } else if (isLengthOfTel) {
       evt.preventDefault();
-      telInput.style.border = '1px solid red';
+      telInput.classList.add('js-invalid');
     } else {
-      telInput.style.border = '1px solid #c9ccd4';
-      textInput.style.border = '1px solid #c9ccd4';
+      textInput.classList.remove('js-invalid');
+      telInput.classList.remove('js-invalid');
     }
 
     textInput.reportValidity();

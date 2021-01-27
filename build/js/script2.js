@@ -81,14 +81,40 @@ if (nav) {
   });
 }
 
-if (links) {
-  links.forEach(function (element) {
-    element.addEventListener('click', function () {
+var scrollMenu = function (elements, speed) {
+  elements.forEach(function (element) {
+    element.addEventListener('click', function (evt) {
       nav.classList.remove('site-navigation--open');
       navToggle.classList.remove('main-header__toggle--active');
+      evt.preventDefault();
+      var anchor = document.querySelector(element.getAttribute('href'));
+      var coordAnchor = anchor.getBoundingClientRect().top;
+      var windowY = window.pageYOffset;
+      var start = null;
+
+      requestAnimationFrame(step);
+
+      function step(time) {
+        if (start === null) {
+          start = time;
+        }
+        var progress = time - start;
+
+        var coordY =
+          coordAnchor < 0
+            ? Math.max(windowY - progress / speed, windowY + coordAnchor)
+            : Math.min(windowY + progress / speed, windowY + coordAnchor);
+
+        window.scrollTo(0, coordY);
+        if (coordY !== windowY + coordAnchor) {
+          requestAnimationFrame(step);
+        }
+      }
     });
   });
-}
+};
+
+scrollMenu(links, 1200);
 
 
 // валидация полей формы
@@ -101,21 +127,21 @@ var buttonSubmit = document.querySelector('.main-header__button');
 
 if (buttonSubmit) {
   buttonSubmit.addEventListener('click', function (evt) {
-    if (textInput) {
-      var text = textInput.value;
-      var isLengthOfText = text.length < MIN_TEXT_LENGTH;
-    }
-    if (telInput) {
-      var tel = telInput.value;
-      var isLengthOfTel = tel.length !== TEL_LENGTH;
-    }
+    var text = textInput.value;
+    var isLengthOfText = text.length < MIN_TEXT_LENGTH;
+    var tel = telInput.value;
+    var isLengthOfTel = tel.length !== TEL_LENGTH;
 
     if (isLengthOfText) {
       evt.preventDefault();
-      textInput.classList.add('js-invalid');
+      if (textInput) {
+        textInput.classList.add('js-invalid');
+      }
     } else if (isLengthOfTel) {
       evt.preventDefault();
-      telInput.classList.add('js-invalid');
+      if (telInput) {
+        telInput.classList.add('js-invalid');
+      }
     } else {
       textInput.classList.remove('js-invalid');
       telInput.classList.remove('js-invalid');
