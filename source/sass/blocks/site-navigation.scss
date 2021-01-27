@@ -4,7 +4,6 @@
   align-items: center;
   position: relative;
 
-  // max-width: 873.5px;
   width: 873.5px;
   margin: 0 auto;
 
@@ -52,16 +51,12 @@
       display: flex;
       position: absolute;
       z-index: 1;
-      // overflow: hidden;
-      // height: 100vh;
-      // position: fixed;
     }
   }
 }
 
 .site-navigation__list {
   display: flex;
-  // justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
 
@@ -85,9 +80,6 @@
 
     color: $color-menutext;
   }
-
-  // @include viewport--md {
-  // }
 }
 
 .site-navigation__item {

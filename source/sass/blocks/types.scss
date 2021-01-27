@@ -1,7 +1,6 @@
 .types {
   display: flex;
   flex-direction: column;
-  // justify-content: center;
   align-items: center;
 
   width: 100%;
@@ -47,7 +46,6 @@
 .types__list {
   display: flex;
   flex-wrap: wrap;
-  // justify-content: space-between;
 
   width: 1126px;
   margin: 0;
@@ -140,10 +138,6 @@
 
   font-weight: 600;
   font-size: 22px;
-
-  // @include viewport--lg {
-
-  // }
 }
 
 .types__item--bigcurcle {

@@ -128,13 +128,11 @@
 .main-header__promo {
   display: flex;
   flex-direction: column;
-  // justify-content: space-between;
 
   width: 393px;
   min-height: 267px;
 
   @include viewport--lg {
-    // justify-content: flex-start;
     position: relative;
     width: 100%;
     min-height: 340px;
