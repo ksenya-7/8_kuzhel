@@ -97,7 +97,7 @@
               <ul class="main-header__list">
                 <li class="main-header__item">
                   <!-- класс js-invalid делает border красным -->
-                  <input id="user-name" type="text" name="user-name" placeholder="Введите Ваше Имя" aria-label="поле для ввода имени пользователя" required="">
+                  <input id="user-name" type="text" name="user-name" placeholder="Введите Ваше Имя" minlength="3" aria-label="поле для ввода имени пользователя" required="">
                 </li>
                 <li class="main-header__item">
                   <!-- класс js-invalid делает border красным -->
@@ -206,11 +206,11 @@
             для себя.
           </p>
           <div class="video__screen">
-            <button class="video__button" type="button" aria-label="запуск просмотра видео">
+            <a href="#" class="video__button" aria-label="запуск просмотра видео">
               <svg width="65" height="65">
                 <use xlink:href="#icon_play"></use>
               </svg>
-            </button>
+            </a>
           </div>
         </section>
       </main>

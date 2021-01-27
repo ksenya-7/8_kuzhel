@@ -127,7 +127,11 @@
   }
 
   @include viewport--lg {
-    margin-bottom: inherit;
+    margin-right: 30px;
+  }
+
+  @include viewport--md {
+    margin-right: 0;
   }
 }
 
