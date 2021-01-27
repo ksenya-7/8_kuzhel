@@ -50,11 +50,10 @@
 
     &--open {
       display: flex;
-      position: fixed;
+      position: absolute;
       z-index: 1;
 
       height: 100vh;
-      overflow-y: hidden;
     }
   }
 }

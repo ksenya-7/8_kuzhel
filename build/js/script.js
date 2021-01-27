@@ -63,6 +63,7 @@ var initPhoneMask = function () {
 initPhoneMask();
 
 // управление меню при навигации и скролл
+var body = document.querySelector('body');
 var nav = document.querySelector('.site-navigation');
 var navToggle = document.querySelector('.main-header__toggle');
 var links = document.querySelectorAll('.site-navigation__link');
@@ -76,6 +77,7 @@ if (nav) {
 
   navToggle.addEventListener('click', function (e) {
     e.preventDefault();
+    body.classList.toggle('scroll-lock');
     nav.classList.toggle('site-navigation--open');
     navToggle.classList.toggle('main-header__toggle--active');
   });
@@ -84,6 +86,7 @@ if (nav) {
 if (links) {
   links.forEach(function (element) {
     element.addEventListener('click', function () {
+      body.classList.remove('scroll-lock');
       nav.classList.remove('site-navigation--open');
       navToggle.classList.remove('main-header__toggle--active');
     });
