@@ -97,7 +97,7 @@
   margin-right: 38px;
 
   @include viewport--xl {
-    margin-right: calc((100% - 263px*3)/2);
+    margin-right: calc((100% - 263px*3) / 2);
   }
 
   @include viewport--lg {
@@ -121,7 +121,6 @@
 }
 
 .about-us__item:nth-child(3n) {
-
   @include viewport--xl {
     margin-right: 0;
   }
