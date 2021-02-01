@@ -95,7 +95,6 @@
 
   &:hover,
   &:focus {
-    opacity: 0.5;
     transition: $transition-time;
     outline: none;
     cursor: pointer;
@@ -103,11 +102,14 @@
 }
 
 .main-header__btn-close {
-  display: flex;
   justify-content: center;
   align-items: center;
+
   width: 50px;
   height: 50px;
+
+  background-color: $color-fonbasic;
+  display: none;
 }
 
 .main-header__btn-open {
@@ -118,6 +120,11 @@
   width: 50px;
   height: 50px;
   background-color: $color-button;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
 }
 
 .main-header__intro {
