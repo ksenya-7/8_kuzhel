@@ -32,6 +32,19 @@
   }
 }
 
+.main-header__wrapper {
+  @include viewport--lg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+
+    overflow-y: auto;
+  }
+}
+
 .main-header__nav {
   display: none;
 
@@ -40,9 +53,9 @@
   }
 
   @include viewport--lg {
-    // display: none;
+    display: none;
     flex-direction: column;
-    // position: static;
+    position: static;
     background-color: $color-fonbasic;
   }
 }
